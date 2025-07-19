@@ -19,8 +19,8 @@ pnpm run dev
 ## Tech Stack
 
 - [Astro](https://astro.build)
-- [TailwindCSS](https://tailwindcss.com/)
-- [DaisyUI](https://daisyui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Daisy UI](https://daisyui.com/)
 
 ### Theming
 
