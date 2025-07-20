@@ -1,13 +1,85 @@
-<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="200" height="200" rx="40" fill="#4A90E2"/>
+<svg viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2d3748;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a5568;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
   
-  <!-- Word blocks -->
-  <rect x="50" y="50" width="40" height="20" rx="4" fill="white"/>
-  <rect x="95" y="50" width="55" height="20" rx="4" fill="white"/>
-
-  <rect x="50" y="80" width="65" height="20" rx="4" fill="white"/>
-  <rect x="120" y="80" width="30" height="20" rx="4" fill="white"/>
-
-  <!-- Assembling arrow -->
-  <path d="M80 120 L100 120 L100 110 L120 130 L100 150 L100 140 L80 140 Z" fill="white"/>
+  <!-- Background elements for depth -->
+  <circle cx="30" cy="30" r="20" fill="url(#accentGradient)" opacity="0.1"/>
+  <circle cx="80" cy="90" r="15" fill="url(#primaryGradient)" opacity="0.08"/>
+  
+  <!-- Main icon - word blocks being assembled -->
+  <!-- First word block -->
+  <rect x="20" y="45" width="35" height="18" rx="4" fill="url(#primaryGradient)" filter="url(#glow)"/>
+  <text x="37.5" y="57" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="white" text-anchor="middle">THE</text>
+  
+  <!-- Connection line -->
+  <line x1="55" y1="54" x2="65" y2="54" stroke="url(#accentGradient)" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="60" cy="54" r="2" fill="url(#accentGradient)"/>
+  
+  <!-- Second word block -->
+  <rect x="65" y="40" width="40" height="18" rx="4" fill="url(#accentGradient)" filter="url(#glow)"/>
+  <text x="85" y="52" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="white" text-anchor="middle">QUICK</text>
+  
+  <!-- Connection line -->
+  <line x1="105" y1="49" x2="115" y2="49" stroke="url(#primaryGradient)" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="110" cy="49" r="2" fill="url(#primaryGradient)"/>
+  
+  <!-- Third word block -->
+  <rect x="115" y="35" width="35" height="18" rx="4" fill="url(#primaryGradient)" filter="url(#glow)"/>
+  <text x="132.5" y="47" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="white" text-anchor="middle">FOX</text>
+  
+  <!-- Assembly arrows showing movement -->
+  <path d="M 45 25 L 50 30 L 45 35" stroke="url(#accentGradient)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 90 20 L 95 25 L 90 30" stroke="url(#primaryGradient)" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Floating word elements -->
+  <rect x="25" y="75" width="25" height="12" rx="2" fill="url(#accentGradient)" opacity="0.7"/>
+  <text x="37.5" y="83" font-family="Arial, sans-serif" font-size="8" font-weight="500" fill="white" text-anchor="middle">IS</text>
+  
+  <rect x="60" y="80" width="30" height="12" rx="2" fill="url(#primaryGradient)" opacity="0.7"/>
+  <text x="75" y="88" font-family="Arial, sans-serif" font-size="8" font-weight="500" fill="white" text-anchor="middle">FAST</text>
+  
+  <!-- Main app title -->
+  <text x="170" y="40" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="url(#textGradient)">
+    SENTENCE
+  </text>
+  <text x="170" y="65" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="url(#primaryGradient)">
+    ASSEMBLER
+  </text>
+  
+  <!-- Decorative tech elements -->
+  <rect x="170" y="75" width="60" height="2" rx="1" fill="url(#accentGradient)" opacity="0.4"/>
+  <rect x="170" y="80" width="80" height="1" rx="0.5" fill="url(#primaryGradient)" opacity="0.3"/>
+  
+  <!-- App indicator -->
+  <circle cx="280" cy="30" r="8" fill="url(#accentGradient)" opacity="0.2"/>
+  <circle cx="280" cy="30" r="4" fill="url(#primaryGradient)"/>
+  <text x="295" y="35" font-family="Arial, sans-serif" font-size="10" font-weight="500" fill="url(#primaryGradient)">APP</text>
+  
+  <!-- Connecting dots pattern -->
+  <circle cx="260" cy="50" r="1.5" fill="url(#accentGradient)" opacity="0.5"/>
+  <circle cx="270" cy="55" r="1" fill="url(#primaryGradient)" opacity="0.4"/>
+  <circle cx="265" cy="65" r="1.2" fill="url(#accentGradient)" opacity="0.3"/>
+  
+  <!-- Subtle connection lines -->
+  <line x1="260" y1="50" x2="270" y2="55" stroke="url(#primaryGradient)" stroke-width="0.5" opacity="0.2"/>
+  <line x1="270" y1="55" x2="265" y2="65" stroke="url(#accentGradient)" stroke-width="0.5" opacity="0.2"/>
 </svg>
